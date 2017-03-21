@@ -2,7 +2,9 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="ssh://git@172.16.40.110:2223/git-server/repos/" />
+  <remote  name="tera"
+           fetch="git@gitlab.hopebaytech.com:qualcomm-tera/" />
   <default revision="refs/tags/android-4.4.4_r1"
            remote="aosp"
            sync-j="4" />
