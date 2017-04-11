@@ -5,6 +5,8 @@
            fetch="ssh://git@172.16.40.110:2223/git-server/repos/" />
   <remote  name="tera"
            fetch="ssh://git@gitlab.hopebaytech.com/qualcomm-tera/" />
+  <remote  name="tera2"
+           fetch="ssh://git@gitlab.hopebaytech.com/TeraAndroid/" />
   <default revision="refs/tags/android-4.4.4_r1"
            remote="aosp"
            sync-j="4" />
@@ -437,5 +439,6 @@
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="vendor/tera" name="vendor_tera" remote="tera" revision="tera/release" />
+  <project path="vendor/apps/TeraService" name="android_packages_apps_TeraService" remote="tera2" revision="master" />
 
 </manifest>
