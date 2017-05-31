@@ -4,6 +4,12 @@
   <remote  name="aosp"
            fetch=".."
            review="https://android-review.googlesource.com/" />
+  <remote  name="tera"
+           fetch="ssh://git@gitlab.hopebaytech.com/qualcomm-tera/" />
+  <remote  name="tera2"
+           fetch="ssh://git@gitlab.hopebaytech.com/TeraAndroid/" />
+  <remote  name="gateway-2.0"
+           fetch="ssh://git@gitlab.hopebaytech.com/gateway-2-0/" />
   <default revision="refs/tags/android-7.1.2_r8"
            remote="aosp"
            sync-j="4" />
