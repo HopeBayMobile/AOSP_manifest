@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
   <remote  name="tera"
            fetch="ssh://git@gitlab.hopebaytech.com/qualcomm-tera/" />
@@ -61,6 +61,7 @@
   <project path="device/google/dragon-kernel" name="device/google/dragon-kernel" groups="device,dragon,pdk" clone-depth="1" />
   <project path="device/google/marlin" name="device/google/marlin" groups="device,marlin" />
   <project path="device/google/marlin-kernel" name="device/google/marlin-kernel" groups="device,marlin" clone-depth="1" />
+  <project path="device/hopebay/tera_bullhead" name="device_hopebay_tera_bullhead" remote="tera" revision="tera/android-7.1.2_r8" groups="device" />
   <project path="device/htc/flounder" name="device/htc/flounder" groups="device,flounder,pdk" />
   <project path="device/htc/flounder-kernel" name="device/htc/flounder-kernel" groups="device,flounder,pdk" clone-depth="1" />
   <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk,pdk" />
