@@ -2,7 +2,14 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="https://android.googlesource.com/"
+           review="https://android-review.googlesource.com/" />
+  <remote  name="tera"
+           fetch="ssh://git@gitlab.hopebaytech.com/qualcomm-tera/" />
+  <remote  name="tera2"
+           fetch="ssh://git@gitlab.hopebaytech.com/TeraAndroid/" />
+  <remote  name="gateway-2.0"
+           fetch="ssh://git@gitlab.hopebaytech.com/gateway-2-0/" />
   <default revision="refs/tags/android-4.4.4_r1"
            remote="aosp"
            sync-j="4" />
@@ -39,6 +46,8 @@
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" />
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
+  <project path="device/hopebay/tera-emulator-arm" name="device_hopebay_tera_emulator_arm" remote="tera" revision="tera/release-kitkat" groups="device" />
+  <project path="device/hopebay/tera-emulator-arm-kernel" name="device_hopebay_tera_emulator_arm_kernel" remote="tera" revision="tera/release-kitkat" groups="device" />
   <project path="device/lge/hammerhead" name="device/lge/hammerhead" groups="device,hammerhead" />
   <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" groups="device,hammerhead" />
   <project path="device/lge/mako" name="device/lge/mako" groups="device,mako" />
@@ -242,7 +251,7 @@
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform/frameworks/base" />
+  <project path="frameworks/base" name="AOSP_frameworks_base" remote="tera" revision="tera/release-kitkat" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -410,12 +419,12 @@
   <project path="prebuilts/ndk" name="platform/prebuilts/ndk" groups="pdk" />
   <project path="prebuilts/python/darwin-x86/2.7.5" name="platform/prebuilts/python/darwin-x86/2.7.5" groups="darwin" />
   <project path="prebuilts/python/linux-x86/2.7.5" name="platform/prebuilts/python/linux-x86/2.7.5" groups="linux" />
-  <project path="prebuilts/qemu-kernel" name="platform/prebuilts/qemu-kernel" groups="pdk" />
+  <project path="prebuilts/qemu-kernel" name="AOSP_prebuilts_qemu-kernel" groups="pdk" remote="tera" revision="tera/release-kitkat" />
   <project path="prebuilts/runtime" name="platform/prebuilts/runtime" />
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
-  <project path="system/core" name="platform/system/core" groups="pdk" />
+  <project path="system/core" name="AOSP_system_core" remote="tera" revision="tera/release-kitkat" groups="pdk" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
@@ -432,5 +441,8 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
+  <project path="vendor/tera" name="vendor_tera" remote="tera" revision="tera/release-kitkat" />
+  <project path="vendor/apps/TeraService" name="android_packages_apps_TeraService" remote="tera2" revision="master" />
+  <project path="vendor/apps/TeraApiLibrary" name="TeraApiLibrary" remote="gateway-2.0" revision="master" />
 
 </manifest>
