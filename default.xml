@@ -5,11 +5,7 @@
            fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
   <remote  name="tera"
-           fetch="ssh://git@gitlab.hopebaytech.com/qualcomm-tera/" />
-  <remote  name="tera2"
-           fetch="ssh://git@gitlab.hopebaytech.com/TeraAndroid/" />
-  <remote  name="gateway-2.0"
-           fetch="ssh://git@gitlab.hopebaytech.com/gateway-2-0/" />
+           fetch="https://github.com/HopeBayMobile/" />
   <default revision="refs/tags/android-7.1.2_r8"
            remote="aosp"
            sync-j="4" />
@@ -67,7 +63,7 @@
   <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk,pdk" />
   <project path="device/huawei/angler-kernel" name="device/huawei/angler-kernel" groups="device,angler,broadcom_pdk,pdk" clone-depth="1" />
   <project path="device/intel/edison" name="device/intel/edison" groups="device,pdk" />
-  <project path="device/lge/bullhead" name="device_lge_bullhead" remote="tera" groups="device,bullhead,pdk" revision="tera/android-7.1.2_r8" />
+  <project path="device/lge/bullhead" name="AOSP_device_lge_bullhead" remote="tera" groups="device,bullhead,pdk" revision="tera/android-7.1.2_r8" />
   <project path="device/lge/bullhead-kernel" name="device/lge/bullhead-kernel" groups="device,bullhead,pdk" clone-depth="1" />
   <project path="device/linaro/hikey" name="device/linaro/hikey" groups="device,hikey,pdk" />
   <project path="device/linaro/hikey-kernel" name="device/linaro/hikey-kernel" groups="device,hikey,pdk" clone-depth="1" />
@@ -410,13 +406,13 @@
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" />
   <project path="ndk" name="platform/ndk" groups="generic_fs" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/apps/Bluetooth" name="AOSP_packages_apps_Bluetooth" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Browser" name="platform/packages/apps/Browser" groups="pdk-fs" remote="aosp" revision="master" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" groups="pdk-fs" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" groups="pdk-fs" />
   <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" groups="pdk-fs" />
   <project path="packages/apps/CarrierConfig" name="platform/packages/apps/CarrierConfig" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/apps/CellBroadcastReceiver" name="AOSP_packages_apps_CellBroadcastReceiver" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" groups="pdk-fs" />
   <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" groups="pdk-fs"/>
@@ -424,14 +420,14 @@
   <project path="packages/apps/DevCamera" name="platform/packages/apps/DevCamera" groups="pdk" />
   <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" groups="pdk-fs" />
   <project path="packages/apps/Email" name="platform/packages/apps/Email" groups="pdk-fs" />
-  <project path="packages/apps/EmergencyInfo" name="packages_apps_EmergencyInfo" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs"/>
+  <project path="packages/apps/EmergencyInfo" name="AOSP_packages_apps_EmergencyInfo" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs"/>
   <project path="packages/apps/ExactCalculator" name="platform/packages/apps/ExactCalculator" groups="pdk-fs" />
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" groups="pdk-fs" />
   <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" groups="pdk-fs" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" groups="pdk-fs" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" groups="pdk-fs" />
   <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" groups="pdk-fs" />
-  <project path="packages/apps/Launcher3" name="package_apps_launcher3_nougat2" remote="tera" revision="tera/develop/android-7.1.2_r8" groups="pdk-fs" />
+  <project path="packages/apps/Launcher3" name="AOSP_package_apps_launcher3" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs" />
   <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" groups="pdk-fs" />
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" groups="pdk-fs" />
   <project path="packages/apps/Messaging" name="platform/packages/apps/Messaging" groups="pdk-fs" />
@@ -439,7 +435,7 @@
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" groups="pdk-fs" />
   <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" groups="apps_nfc,pdk-fs" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" groups="pdk-fs" />
-  <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/apps/PackageInstaller" name="AOSP_packages_apps_PackageInstaller" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" groups="pdk-fs" />
   <project path="packages/apps/PhoneCommon" name="platform/packages/apps/PhoneCommon" groups="pdk-cw-fs,pdk-fs"/>
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" groups="pdk-fs" />
@@ -447,24 +443,24 @@
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" groups="pdk-fs" />
   <project path="packages/apps/RetailDemo" name="platform/packages/apps/RetailDemo" groups="pdk-fs" />
   <project path="packages/apps/SafetyRegulatoryInfo" name="platform/packages/apps/SafetyRegulatoryInfo" groups="pdk-fs" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs" />
+  <project path="packages/apps/Settings" name="AOSP_packages_apps_Settings" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" groups="pdk-fs" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" groups="pdk-fs" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" groups="pdk-fs" />
-  <project path="packages/apps/Stk" name="packages_apps_Stk" remote="tera" revision="tera/android-7.1.2_r8" groups="apps_stk,pdk-fs" />
+  <project path="packages/apps/Stk" name="AOSP_packages_apps_Stk" remote="tera" revision="tera/android-7.1.2_r8" groups="apps_stk,pdk-fs" />
   <project path="packages/apps/StorageManager" name="platform/packages/apps/StorageManager" groups="pdk-fs" />
   <project path="packages/apps/Tag" name="platform/packages/apps/Tag" groups="pdk-fs" />
   <project path="packages/apps/Terminal" name="platform/packages/apps/Terminal" groups="pdk-fs" />
   <project path="packages/apps/Test/connectivity" name="platform/packages/apps/Test/connectivity" groups="pdk" />
-  <project path="packages/apps/TvSettings" name="packages_apps_TvSettings" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs" />
+  <project path="packages/apps/TvSettings" name="AOSP_packages_apps_TvSettings" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs" />
   <project path="packages/apps/TV" name="platform/packages/apps/TV" />
   <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" groups="pdk-fs" />
   <project path="packages/apps/WallpaperPicker" name="platform/packages/apps/WallpaperPicker" groups="pdk-fs" />
   <project path="packages/experimental" name="platform/packages/experimental" />
-  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs" />
+  <project path="packages/inputmethods/LatinIME" name="AOSP_packages_inputmethods_LatinIME" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs" />
   <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" groups="pdk-fs" />
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" groups="pdk-fs" />
-  <project path="packages/providers/BlockedNumberProvider" name="packages_providers_BlockedNumberProvider" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs" />
+  <project path="packages/providers/BlockedNumberProvider" name="AOSP_packages_providers_BlockedNumberProvider" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-fs" />
   <project path="packages/providers/BookmarkProvider" name="platform/packages/providers/BookmarkProvider" groups="pdk-fs" />
   <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/providers/CallLogProvider" name="platform/packages/providers/CallLogProvider" groups="pdk-fs" />
@@ -472,7 +468,7 @@
   <project path="packages/providers/DownloadProvider" name="platform/packages/providers/DownloadProvider" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/providers/MediaProvider" name="platform/packages/providers/MediaProvider" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/providers/PartnerBookmarksProvider" name="platform/packages/providers/PartnerBookmarksProvider" groups="pdk-fs" />
-  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/providers/TelephonyProvider" name="AOSP_packages_providers_TelephonyProvider" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/providers/TvProvider" name="platform/packages/providers/TvProvider" groups="pdk-fs" />
   <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/screensavers/Basic" name="platform/packages/screensavers/Basic" groups="pdk-fs" />
@@ -480,8 +476,8 @@
   <project path="packages/screensavers/WebView" name="platform/packages/screensavers/WebView" groups="pdk-fs" />
   <project path="packages/services/Car" name="platform/packages/services/Car" groups="adp8064,pdk-cw-fs,pdk-fs" />
   <project path="packages/services/Mms" name="platform/packages/services/Mms" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/services/Telecomm" name="AOSP_packages_services_Telecomm" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/services/Telephony" name="AOSP_packages_services_Telephony" remote="tera" revision="tera/android-7.1.2_r8" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" groups="pdk-fs" />
   <project path="pdk" name="platform/pdk" groups="pdk" />
   <project path="platform_testing" name="platform/platform_testing" groups="pdk-fs,pdk-cw-fs,cts" />
@@ -561,11 +557,8 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" groups="pdk" />
-  <project path="vendor/qcom/bullhead" name="vendor_qcom_bullhead" remote="tera" revision="tera/android-7.1.2_r8" />
-  <project path="vendor/lge/bullhead" name="vendor_lge_bullhead" remote="tera" revision="tera/android-7.1.2_r8" />
   <project path="vendor/tera" name="vendor_tera" remote="tera" revision="tera/android-7.1.2_r8" />
-  <project path="vendor/hcfs" name="HCFS" remote="gateway-2.0" revision="dev-2.3.2" sync-s="true"/>
-  <project path="vendor/apps/TeraService" name="android_packages_apps_TeraService" remote="tera2" revision="master" />
-  <project path="vendor/apps/TeraApiLibrary" name="TeraApiLibrary" remote="gateway-2.0" revision="master" />
+  <project path="vendor/apps/TeraService" name="vendor_apps_TeraService" remote="tera" revision="master" />
+  <project path="vendor/apps/TeraApiLibrary" name="vendor_apps_TeraApiLibrary" remote="tera" revision="master" />
 
 </manifest>
